@@ -23,7 +23,9 @@ namespace FitnessProgram
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            NextWindow next = new NextWindow();
+            next.Show();
+            this.Close();
         }
     }
 }
