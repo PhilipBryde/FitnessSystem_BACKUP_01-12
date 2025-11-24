@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FitnessProgram"
   ],
-  "SelectedNode": "\\FitnessProgram.slnx",
+  "SelectedNode": "\\FitnessProgram\\Member.cs",
   "PreviewInSolutionExplorer": false
 }

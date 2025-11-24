@@ -37,7 +37,7 @@ namespace FitnessProgram
         /// Returnerer Member-objektet hvis successfuldt login, ellers null.
         /// </summary>
         
-        public Member Authenticate(string username, string password)
+        public Member? Authenticate(string username, string password)
         {
             // Først laver vi password om til et tal (ID)
             if (!int.TryParse(password, out int id))
@@ -50,8 +50,8 @@ namespace FitnessProgram
             // ID Matcher password
 
             return _members.FirstOrDefault(m =>
-               m.Name.Split(' ')[0].Equals(username, StringComparison.OrdinalIgnoreCase)
-               && m.ID == id
+               m.name.Split(' ')[0].Equals(username, StringComparison.OrdinalIgnoreCase)
+               && m.id == id
             );
         }
 

@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Fitness-System" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" Height="35" Width="91"/>
-        <PasswordBox HorizontalAlignment="Center" Margin="0,199,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="400,341,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBlock Text="Fitness-Center" FontSize="50" HorizontalAlignment="Center"  VerticalAlignment="Top" Height="150" Width="350" Margin="0,22,0,0"/>
+        <PasswordBox HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="120"/>
+        <Button Content="login" HorizontalAlignment="Center" Margin="0,271,0,0" VerticalAlignment="Top" Click="Button_Click" Height="20" Width="50"/>
 
     </Grid>
 </Window>

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="NextWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Hello Sir" HorizontalAlignment="Left" Margin="270,0,0,0" VerticalAlignment="Center"/>
+        <TextBlock Text="Activity's" HorizontalAlignment="Center" FontSize="75" VerticalAlignment="Top" Margin="0,56,0,0"/>
 
     </Grid>
 </Window>
