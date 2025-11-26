@@ -23,9 +23,10 @@ namespace FitnessProgram
 
         public MemberWindow()
         {
-            
-            ShowMembers(); //Kalder på ShowMembers funktionen som printer medlemmerne ud
+            InitializeComponent();
 
+            ShowMembers(); //Kalder på ShowMembers funktionen som printer medlemmerne ud
+            
         }
         //Hello
         public void ShowMembers()
@@ -37,7 +38,7 @@ namespace FitnessProgram
             {
                 var member = localList[i];
                 allMembers.AppendLine($"ID: {member.id} Navn: {member.name} Køn: {member.gender}"); //printer hvert variabel i hver sin linje, da StringBuilder gør det til én stor string
-
+                
             }
             MemberBlock.Text = allMembers.ToString(); //Laver vores StringBuilder om til den endelige string og ligger det ind i vores TextBlock
         }

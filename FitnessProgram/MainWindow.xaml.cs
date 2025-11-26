@@ -18,13 +18,14 @@ namespace FitnessProgram
     {
         public MainWindow()
         {
+            InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NextWindow next = new NextWindow();
-            next.Show();
-            this.Close();
+            NextWindow next = new NextWindow(); //Opretter et nyt objekt af NextWindow (hovedmenuen)
+            next.Show(); //Åbner vinduet når der bliver trykket
+            this.Close(); //Lukker det nuværende vindue
         }
     }
 }

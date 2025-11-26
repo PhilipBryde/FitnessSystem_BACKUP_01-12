@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 namespace FitnessProgram
 {
     public class Member
-    {
-        public List<Member> memberList = new List<Member>(); //liste hvor de forskellige medlemmer bliver tilføjet ind i
-        
+    {        
         //Opretter forskellige variabler til vores medlemmer;de er alle tomme og kan tilgåes og ændres senere hen (ved brug af get; set,)
         public int id { get; set; }
         public string name { get; set; }
