@@ -53,7 +53,7 @@ namespace FitnessProgram {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FitnessProgram;component/nextwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FitnessProgram;V1.0.0.0;component/nextwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\NextWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
