@@ -23,5 +23,13 @@ namespace FitnessProgram
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MemberWindow member = new MemberWindow();
+            member.Show();
+            this.Close();
+        }
+
     }
 }
