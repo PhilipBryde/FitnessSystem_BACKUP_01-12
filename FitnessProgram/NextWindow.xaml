@@ -6,9 +6,28 @@
         xmlns:local="clr-namespace:FitnessProgram"
         mc:Ignorable="d"
         Title="NextWindow" Height="450" Width="800">
-    <Grid>
-        <Label Content="Hello Sir" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="400,273,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+    <Grid Background="Black">
+
+        <Label 
+            Content="Activity" 
+            Foreground="White"
+            HorizontalAlignment="Center" 
+            Margin="0,41,0,0" 
+            VerticalAlignment="Top"/>
+        <TextBlock
+            Text="Members"
+            Foreground="White"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" Margin="371,196,0,0" RenderTransformOrigin="-5.492,-6.539"/>
+
+
+        <Button 
+            Content="Button" 
+            Background="LightGreen"
+            HorizontalAlignment="Left" 
+            Margin="376,217,0,0" 
+            VerticalAlignment="Top" 
+            Click="Button_Click"/>
 
     </Grid>
 </Window>

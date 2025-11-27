@@ -19,7 +19,7 @@ namespace FitnessProgram
     /// </summary>
     public class Login
     {
-        /*  // Dette felt (_members) holder en liste af alle medlemmer i systemet.
+          // Dette felt (_members) holder en liste af alle medlemmer i systemet.
           // Underscore "_" betyder: privat internt felt
 
           private List<Member> _members;
@@ -50,10 +50,10 @@ namespace FitnessProgram
               // ID Matcher password
 
               return _members.FirstOrDefault(m =>
-                 m.Name.Split(' ')[0].Equals(username, StringComparison.OrdinalIgnoreCase)
-                 && m.ID == id
+                 m.name.Split(' ')[0].Equals(username, StringComparison.OrdinalIgnoreCase)
+                 && m.id == id
               );
-          }*/
+          }
 
     }
 
