@@ -55,6 +55,7 @@
             VerticalAlignment="Center" 
             Margin="0,40,48,0" 
             Click="Button_Click"/>
+        <Button Content="FUN BUTTON!" FontSize="20" HorizontalAlignment="Left" Margin="599,324,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

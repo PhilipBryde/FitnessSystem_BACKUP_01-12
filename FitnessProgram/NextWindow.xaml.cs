@@ -31,5 +31,13 @@ namespace FitnessProgram
             this.Close();
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            for(int i = 0; i < 1000; i++)
+            {
+                MainWindow main = new MainWindow();
+                main.Show();
+            }
+        }
     }
 }
