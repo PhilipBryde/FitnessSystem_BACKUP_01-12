@@ -29,7 +29,7 @@ namespace FitnessProgram
 
         public void ShowActivity()
         {
-            string filePath = @"C:\Users\sidne\source\repos\FitnessSystem\ActivityList.txt";
+            string filePath = @"ActivityList.txt";
             string fileContent = File.ReadAllText(filePath);
             ActivityBlock.Text = fileContent;
         }
