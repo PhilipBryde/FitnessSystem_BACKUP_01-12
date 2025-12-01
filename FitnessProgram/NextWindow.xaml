@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="NextWindow" Height="450" Width="800">
     
-    <Grid Background="Black">
+    <Grid Background="Black"> <!-- philip har stået for layout -->
 
         <!-- Grid row layout -->
         <Grid.RowDefinitions>
