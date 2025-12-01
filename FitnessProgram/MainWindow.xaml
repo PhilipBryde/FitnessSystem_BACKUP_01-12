@@ -94,7 +94,7 @@
                 Background="LightGreen"
                 Foreground="Black"
                 Margin="0,-17,0,0"
-                Click="GoToRegisterWindow_Click"/>
+                Click="Button_Click"/>
         </StackPanel>
 
         <!-- text til oprettelse af ny bruger -->

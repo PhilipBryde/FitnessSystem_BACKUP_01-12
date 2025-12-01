@@ -33,7 +33,7 @@ namespace FitnessProgram
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            for(int i = 0; i < 1000; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 MainWindow main = new MainWindow();
                 main.Show();
@@ -47,6 +47,14 @@ namespace FitnessProgram
             this.Close();
         }
 
-        
+        //Philip Kode 
+        private void GoToMainWindow_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+
+        }
+
     }
 }
