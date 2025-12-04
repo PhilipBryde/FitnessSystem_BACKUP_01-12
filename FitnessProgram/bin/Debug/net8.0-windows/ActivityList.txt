@@ -1,6 +1,6 @@
-Yoga
-Boxing
-Spinning
-Pilates
-Crossfit
+1 - Yoga
+2 - Boxing
+3 - Spinning
+4 - Pilates
+5 - Crossfit
 Lars

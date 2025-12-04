@@ -15,11 +15,11 @@
         <TextBlock x:Name="Spinning" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="322,134,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
         <TextBlock x:Name="Pilates" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="430,134,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
         <TextBlock x:Name="Crossfit" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="531,131,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBox   x:Name="EnterActivity"  HorizontalAlignment="Left" Margin="670,274,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button    x:Name="DeleteMemberButton" Foreground="White" Background="Red" Content="Slet" HorizontalAlignment="Left" Margin="683,297,0,0" VerticalAlignment="Top" Click="DeleteActivityButton_Click"/>
+        <TextBox   x:Name="EnterMember"  HorizontalAlignment="Left" Margin="670,274,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="EnterActivity" HorizontalAlignment="Left" Margin="670,235,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button    x:Name="DeleteMemberButton" Foreground="White" Background="Red" Content="Slet" HorizontalAlignment="Left" Margin="683,297,0,0" VerticalAlignment="Top" Click="DeleteMemberButton_Click" />
         <Button x:Name="AddMemberButton" Content="Tilføj" Background="DeepSkyBlue" HorizontalAlignment="Left" Margin="739,297,0,0" VerticalAlignment="Top"/>
         <Button x:Name="CreateActivity" Background="GreenYellow" Content="Opret" HorizontalAlignment="Left" Margin="714,347,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="670,235,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
 
     </Grid>
