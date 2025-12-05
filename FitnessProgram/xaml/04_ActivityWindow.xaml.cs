@@ -63,6 +63,8 @@ namespace FitnessProgram
                             localMembers[10];
 
             Pilates.Text = localActivities[3].ToUpper();
+
+            Crossfit.Text = localActivities[4].ToUpper();
         }
 
 

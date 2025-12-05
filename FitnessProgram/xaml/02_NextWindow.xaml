@@ -22,8 +22,8 @@
                    Foreground="White"
                    FontSize="40"
                    Margin="20,20,0,0"
-                   VerticalAlignment="Top"
-                   HorizontalAlignment="Left"/>
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
 
         <!-- Members Button -->
         <Button 
