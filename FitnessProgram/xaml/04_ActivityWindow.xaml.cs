@@ -1,17 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.IO;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace FitnessProgram
 {
@@ -20,56 +11,88 @@ namespace FitnessProgram
     /// </summary>
     public partial class ActivityWindow : Window
     {
-        Fitness fitness = new Fitness();
-        public ActivityWindow()
+        private readonly Fitness fitness; // Shared fitness system
+        private readonly Member member;   // Logged in user
+
+        // --- Constructor: MUST match Option 1 ---
+        public ActivityWindow(Fitness fitness, Member member)
         {
             InitializeComponent();
+            this.fitness = fitness;
+            this.member = member;
+
             ShowActivity();
-            
+            ApplyRoleRestrictions(); // Hide admin controls if not admin
         }
-        
+
+        // Hide admin-only controls
+        private void ApplyRoleRestrictions()
+        {
+            if (member.role.ToLower() != "admin")
+            {
+                DeleteMemberButton.Visibility = Visibility.Collapsed;
+                AddMemberButton.Visibility = Visibility.Collapsed;
+                CreateActivity.Visibility = Visibility.Collapsed;
+                EnterActivity.Visibility = Visibility.Collapsed;
+                EnterMember.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        // Show all activities and members
         public void ShowActivity()
         {
             List<string> localMembers = fitness.MemberFromFile();
             List<string> localActivities = fitness.ActivityFromFile();
-            Yoga.Text = localActivities[0].ToUpper() + Environment.NewLine + localMembers[1] + Environment.NewLine + localMembers[3] + Environment.NewLine + localMembers[8] + Environment.NewLine + localMembers[11] + Environment.NewLine + localMembers[13];
-            Boxing.Text = localActivities[1].ToUpper() + Environment.NewLine + localMembers[1] + Environment.NewLine + localMembers[4] + Environment.NewLine + localMembers[7];
-            Spinning.Text = localActivities[2].ToUpper() + Environment.NewLine + localMembers[0] + Environment.NewLine + localMembers[2] + Environment.NewLine + localMembers[9] + Environment.NewLine + localMembers[10];
+
+            Yoga.Text = localActivities[0].ToUpper() + Environment.NewLine +
+                        localMembers[1] + Environment.NewLine +
+                        localMembers[3] + Environment.NewLine +
+                        localMembers[8] + Environment.NewLine +
+                        localMembers[11] + Environment.NewLine +
+                        localMembers[13];
+
+            Boxing.Text = localActivities[1].ToUpper() + Environment.NewLine +
+                          localMembers[1] + Environment.NewLine +
+                          localMembers[4] + Environment.NewLine +
+                          localMembers[7];
+
+            Spinning.Text = localActivities[2].ToUpper() + Environment.NewLine +
+                            localMembers[0] + Environment.NewLine +
+                            localMembers[2] + Environment.NewLine +
+                            localMembers[9] + Environment.NewLine +
+                            localMembers[10];
+
             Pilates.Text = localActivities[3].ToUpper();
-            //Crossfit.Text
         }
 
-        public void RemoveMember()
+        // Remove a member from an activity
+        private void RemoveMemberFromActivity()
         {
-            // Aktivitet: 1 = Yoga, 2 = Boxing osv.
             if (!int.TryParse(EnterActivity.Text, out int activityIndex))
             {
-                MessageBox.Show("Indtast aktivitet 1-5 (1=Yoga, 2=Boxing, 3=Spinning, 4=Pilates, 5=Crossfit)");
+                MessageBox.Show("Indtast aktivitet 1-5");
                 return;
             }
 
-            // Medlem ID som brugeren ser (1, 2, 3 ... 14 osv.) → vi trækker 1 fra for at få rigtigt index
-            if (!int.TryParse(EnterMember.Text, out int memberId) || memberId < 1)
+            if (!int.TryParse(EnterMember.Text, out int memberId))
             {
-                MessageBox.Show("Indtast medlemets ID (f.eks. 14)");
+                MessageBox.Show("Indtast gyldigt medlem ID");
                 return;
             }
 
-            int memberIndex = memberId - 1;  // HER: Brugeren skriver 14 → bliver index 13
+            int memberIndex = memberId - 1;
 
             List<string> localMembers = fitness.MemberFromFile();
 
-            // Tjek at medlemmet findes
             if (memberIndex < 0 || memberIndex >= localMembers.Count)
             {
-                MessageBox.Show($"Medlem med ID {memberId} findes ikke!");
+                MessageBox.Show("Medlem findes ikke!");
                 return;
             }
 
             string memberName = localMembers[memberIndex];
 
-            // Vælg TextBlock
-            TextBlock target = activityIndex switch
+            TextBlock? target = activityIndex switch
             {
                 1 => Yoga,
                 2 => Boxing,
@@ -81,12 +104,13 @@ namespace FitnessProgram
 
             if (target == null) return;
 
-            var lines = target.Text
+            List<string> lines = target.Text
                 .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)
                 .ToList();
 
             bool removed = false;
-            for (int i = 1; i < lines.Count; i++)  // Spring første linje over (aktivitetsnavn)
+
+            for (int i = 1; i < lines.Count; i++)
             {
                 if (lines[i] == memberName)
                 {
@@ -98,23 +122,26 @@ namespace FitnessProgram
 
             if (!removed)
             {
-                MessageBox.Show($"Medlem {memberId} ({memberName}) er ikke tilmeldt denne aktivitet!");
+                MessageBox.Show("Medlem er ikke i denne aktivitet.");
                 return;
             }
 
-            // Opdater visning
             target.Text = string.Join(Environment.NewLine, lines);
-
-            // Ryd felter
-            EnterActivity.Text = "";
-            EnterMember.Text = "";
-
-            MessageBox.Show($"Medlem {memberId} ({memberName}) fjernet fra aktivitet {activityIndex}!");
+            MessageBox.Show($"Fjernede {memberName} fra aktiviteten.");
         }
 
-        private void DeleteMemberButton_Click(object sender, RoutedEventArgs e)
+        // DELETE BUTTON HANDLER
+        private void DeleteActivityButton_Click(object sender, RoutedEventArgs e)
         {
-            RemoveMember();
+            RemoveMemberFromActivity();
+        }
+
+        // BACK BUTTON HANDLER
+        private void GoToNextWindow_Click(object sender, RoutedEventArgs e)
+        {
+            NextWindow next = new NextWindow(member, fitness);
+            next.Show();
+            this.Close();
         }
     }
 }

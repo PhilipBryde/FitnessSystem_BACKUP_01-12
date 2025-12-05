@@ -133,7 +133,7 @@ namespace FitnessProgram {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/FitnessProgram;component/activitywindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/FitnessProgram;V1.0.0.0;component/activitywindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ActivityWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -40,7 +40,7 @@ namespace FitnessProgram
         // --- Button: Open ActivityWindow --- Philip
         private void GoToActivity_Click(object sender, RoutedEventArgs e)
         {
-            ActivityWindow activity = new ActivityWindow(fitness, this);
+            ActivityWindow activity = new ActivityWindow(fitness, member);
             activity.Show();
             this.Hide(); // Use Hide() instead of Close()
         }
