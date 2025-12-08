@@ -12,7 +12,7 @@ public class Fitness
 
     public Fitness()
     {
-        // Opretter medlemmer med givende id, navn og køn, bliver brugt til login
+        // Opretter medlemmer med givende id, navn og køn, bliver nu kun brugt til login
         memberList.Add(new Member(0, "admin", 'M', "Admin"));
         memberList.Add(new Member(1, "Mathias", 'M'));
         memberList.Add(new Member(2, "Anders", 'M'));
@@ -31,7 +31,7 @@ public class Fitness
         memberList.Add(new Member(15, "Magnus", 'M'));
     }
 
-    public List<Member> GetAllMembers()
+    public List<Member> GetAllMembers() //Public metode der retunere listen af den gamle liste over medlemmer
     {
         return memberList;
     } 

@@ -13,9 +13,9 @@ namespace FitnessProgram
             InitializeComponent();
             this.fitness = fitness;
             this.member = member;
-            WelcomeText.Text = $"Velkommen {member.name}!"; // Show welcome message
+            WelcomeText.Text = $"Velkommen {member.name}!"; // Viser velkomst beskeden med brugerens navn
 
-            // SHOW ADMIN BUTTON ONLY IF ROLE IS ADMIN
+            // Viser medlems knappen hvis man er logget ind som admin
             if (member.role.ToLower() == "admin")
             {
                 MemberButton.Visibility = Visibility.Visible;
