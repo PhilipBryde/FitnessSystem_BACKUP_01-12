@@ -4,8 +4,8 @@ namespace FitnessProgram
 {
     public partial class NextWindow : Window
     {
-        private readonly Fitness fitness;    // Reference to shared Fitness system
-        private readonly Member? member;     // Current logged-in member (nullable if needed)
+        private readonly Fitness fitness;   
+        private readonly Member? member;     
 
         // Constructor for logged-in member
         public NextWindow(Member member, Fitness fitness)
@@ -22,7 +22,7 @@ namespace FitnessProgram
             }
         }
 
-        // Optional constructor when navigating without a member
+        // Optional constructor når man navigere uden member 
         public NextWindow(Fitness fitness)
         {
             InitializeComponent();

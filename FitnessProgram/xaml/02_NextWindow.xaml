@@ -6,6 +6,8 @@
         Title="NextWindow" Height="1080" Width="1920"
         Icon="/Icon">
 
+    <!-- Philip xaml code  -->
+    
     <Grid Background="Black">
 
         <!-- Define 4 vertical rows -->
@@ -65,6 +67,8 @@
             HorizontalAlignment="Center"
             Margin="800,0,0,0"
             Click="GoToMainWindow_Click"/>
+
+<!-- Philip xaml code  -->
 
     </Grid>
 </Window>

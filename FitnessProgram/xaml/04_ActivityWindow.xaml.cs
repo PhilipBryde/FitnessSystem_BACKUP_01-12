@@ -15,7 +15,7 @@ namespace FitnessProgram
         private readonly Member member;   // Logged in user
         public int newActCount = 0;
 
-        // --- Constructor: MUST match Option 1 ---
+        // --- Constructor: skal match Option 1 ---
         public ActivityWindow(Fitness fitness, Member member)
         {
             InitializeComponent();
@@ -24,11 +24,11 @@ namespace FitnessProgram
             this.member = member ?? throw new ArgumentNullException(nameof(member));
 
             ShowActivity();
-            ApplyRoleRestrictions(); // Hide admin controls if not admin
-            ApplyRoleRestrictions1(); //Member leave or join activity
-            UpdateAllCapacities(); //updater så man kan se hvor mange er på en aktivitet
+            ApplyRoleRestrictions(); // fjerner admin controls if not admin
+            ApplyRoleRestrictions1(); // Member leave or join activity
+            UpdateAllCapacities(); // updater så man kan se hvor mange er på en aktivitet
 
-            // ** NYT OPKALD: Sørger for at fjerne ID/Køn for almindelige medlemmer, hvis data allerede er indlæst **
+            // Sørger for at fjerne ID/Køn så medlemer ikke kan se hinandens info
             FormatTextForNonAdmin();
         }
 
@@ -46,7 +46,7 @@ namespace FitnessProgram
             }
         }
 
-
+        // Sidney Kode
         public void ShowActivity() //Oprettelse af aktiviteter
         {
             List<string> localMembers = fitness.MemberFromFile(); //Kopi af listen over medlemmer
@@ -93,8 +93,9 @@ namespace FitnessProgram
                     localMembers[13];
             }
         }
+        // Sidney Kode
 
-        //NY METODE: Sikrer at almindelige brugere kun ser navne i de viste TextBlocks -- Philip
+        // Sikrer at almindelige brugere kun ser navne i de viste TextBlocks -- Philip
         private void FormatTextForNonAdmin()
         {
             // Kun nødvendigt at køre for almindelige medlemmer
@@ -242,7 +243,7 @@ namespace FitnessProgram
                 if (EnterActivity != null) EnterActivity.Visibility = Visibility.Visible;
                 if (EnterMember != null) EnterMember.Visibility = Visibility.Visible;
 
-                // Hide user buttons FOR ADMIN
+                // Skjul user buttons FOR ADMIN
                 if (JoinButton != null) JoinButton.Visibility = Visibility.Collapsed;
                 if (LeaveButton != null) LeaveButton.Visibility = Visibility.Collapsed;
                 if (TypeActivityIn != null) TypeActivityIn.Visibility = Visibility.Collapsed;
@@ -250,7 +251,7 @@ namespace FitnessProgram
             }
             else
             {
-                // Hide admin-only controls FOR USER
+                // Skjul admin-only controls FOR USER
                 if (DeleteMemberButton != null) DeleteMemberButton.Visibility = Visibility.Collapsed;
                 if (CreateActivity != null) CreateActivity.Visibility = Visibility.Collapsed;
                 if (EnterActivity != null) EnterActivity.Visibility = Visibility.Collapsed;
@@ -261,7 +262,7 @@ namespace FitnessProgram
                 if (IndtastNavnetOpret != null) IndtastNavnetOpret.Visibility = Visibility.Collapsed;
 
 
-                // Show user buttons
+                // Vis user buttons
                 if (JoinButton != null) JoinButton.Visibility = Visibility.Visible;
                 if (LeaveButton != null) LeaveButton.Visibility = Visibility.Visible;
             }
@@ -302,7 +303,7 @@ namespace FitnessProgram
             }
             // **********************************************
 
-            // Split lines
+            // Split lines så teksten er mere læsbar
             List<string> lines = target.Text
                 .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)
                 .ToList();

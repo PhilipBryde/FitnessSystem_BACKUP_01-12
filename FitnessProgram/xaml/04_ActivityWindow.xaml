@@ -34,8 +34,9 @@
         <TextBox x:Name="NewActivity" HorizontalAlignment="Left" Margin="1298,329,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <!-- Sidney xaml code -->
 
+       
         <!-- Philip xaml code -->
-
+        <!--Tilbage Knap -->
         <Button 
         Content="TILBAGE"
         x:Name="TilbageButton"     
@@ -48,7 +49,7 @@
         Margin="1307,66,0,0"
         Click="GoToNextWindow_Click"/>
 
-        <!-- USER SECTION: Tilmeld og Frameld -->
+        <!-- Tilmeld Hold Knap -->
         <Button x:Name="JoinButton"
         Content="Tilmeld"
         Width="100"
@@ -60,6 +61,7 @@
         HorizontalAlignment="Center"
         Click="JoinActivity_Click"/>
 
+        <!-- Frameld Hold Knap -->
         <Button x:Name="LeaveButton"
         Content="Frameld"
         Width="100"
@@ -70,16 +72,18 @@
         Margin="0,125,0,0"
         HorizontalAlignment="Center"
         Click="LeaveActivity_Click"/>
-
+       
+        <!--tast hvilken aktivitet man vil til eller frameldes box -->
         <TextBox
-    x:Name="TypeActivityIn"
-    Grid.Row="1"
-    HorizontalAlignment="Left"
-    VerticalAlignment="Top"
-    Width="200"
-    Height="100" 
-    Margin="609,487,0,0" />
-        <!--Old Margin Margin="610,500,0,0"-->
+        x:Name="TypeActivityIn"
+        Grid.Row="1"
+        HorizontalAlignment="Left"
+        VerticalAlignment="Top"
+        Width="200"
+        Height="100" 
+        Margin="609,487,0,0" />
+     
+        <!-- Counter for mange der er på en aktivitet -->
         <TextBlock 
             x:Name="YogaCount" 
             Grid.Row="1" 
@@ -144,6 +148,7 @@
             HorizontalAlignment="Left" 
             Margin="850,100,0,0" 
             VerticalAlignment="Top"/>
+        <!-- Counter for mange der er på en aktivitet -->
 
         <!-- Text blocks-->
         <TextBlock
@@ -183,6 +188,8 @@
            Margin="549,459,0,0" 
            RenderTransformOrigin="0.379,8.942"
            />
+        <!-- Text blocks-->
+        
         <!-- Philip xaml code -->
 
 

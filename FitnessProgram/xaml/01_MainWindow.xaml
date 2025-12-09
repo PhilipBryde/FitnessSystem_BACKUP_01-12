@@ -5,7 +5,9 @@
         WindowStyle="SingleBorderWindow"
         Title="Login" Height="1080" Width="1920"
         Icon="/Icon">
-
+        
+<!-- Philip xaml code  -->
+    
     <Grid Background="Black">
 
         <!-- Grid layout -->
@@ -119,6 +121,8 @@
             Background="LightBlue"
             Foreground="Black"
             Margin="0,215,0,0" Click="Button_Register_Click"/>
+        
+<!-- Philip xaml code  -->
 
     </Grid>
 </Window>

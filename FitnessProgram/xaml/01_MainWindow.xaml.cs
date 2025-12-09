@@ -6,17 +6,15 @@ namespace FitnessProgram
 {
     public partial class MainWindow : Window
     {
-        private readonly Fitness _fitness; // shared Fitness system
+        private readonly Fitness _fitness; // Det delte Fitness system
 
-        // Default constructor (for designer)
         public MainWindow()
         {
             InitializeComponent();
             _fitness = new Fitness(); // new system if not passed
         }
 
-        // Constructor that accepts existing Fitness object
-        public MainWindow(Fitness fitness)
+        public MainWindow(Fitness fitness) 
         {
             InitializeComponent();
             _fitness = fitness;
@@ -28,17 +26,15 @@ namespace FitnessProgram
             string username = UsernameInput.Text.Trim();
             string password = PasswordInput.Password.Trim();
 
-            // Prevent empty login fields
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password)) // stopper tomme login forsøg
             {
                 MessageBox.Show("Udfyld både brugernavn og kodeord.");
                 return;
             }
 
-            // Call authentication in Fitness controller
             Member loggedIn = _fitness.Authenticate(username, password);
 
-            // Incorrect login
+            // Forkert login besked
             if (loggedIn == null)
             {
                 MessageBox.Show("Forkert brugernavn eller kodeord.");
@@ -55,7 +51,6 @@ namespace FitnessProgram
         // --- REGISTER BUTTON --- Philip
         private void Button_Register_Click(object sender, RoutedEventArgs e)
         {
-            // Pass same Fitness system so new members are stored correctly
             RegisterWindow reg = new RegisterWindow(_fitness);
             reg.ShowDialog();
         }

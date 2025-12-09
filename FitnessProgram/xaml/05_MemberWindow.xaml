@@ -9,7 +9,9 @@
         WindowStyle="SingleBorderWindow"
         Title="MemberWindow" Height="1080" Width="1920"
         Icon="/Icon">
-    
+
+<!-- Philip xaml code  -->
+
     <Grid Background="Black">
 
         <!-- Grid row layout -->
@@ -94,6 +96,8 @@
             TextWrapping="Wrap" 
             Text="Tast medlemmets ID for at slette det" 
             VerticalAlignment="Top"/>
+
+<!-- Philip xaml code  -->
 
     </Grid>
 </Window>

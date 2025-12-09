@@ -27,20 +27,30 @@ namespace FitnessProgram
             _fitness = fitness;
         }
 
-
+        // Håndterer klik på knappen 'Opret Bruger'.
         private void Button_Create_Click(object sender, RoutedEventArgs e)
         {
+            // Henter input fra tekstfelterne.
             string name = NameInput.Text;
+            // Tager det første bogstav i Køn, ellers standard 'M'.
             char gender = GenderInput.Text.Length > 0 ? GenderInput.Text[0] : 'M';
+
+            // Forsøger at konvertere Alder til et tal.
             if (!int.TryParse(AgeInput.Text, out int age))
             {
+                // Viser fejlbesked, hvis Alder ikke er et tal.
                 MessageBox.Show("Alder skal være et tal.");
                 return;
             }
-
+            // Opretter et nyt medlem via Fitness-systemet.
             Member newMember = _fitness.Register(name, gender, age);
-            SaveMemberToFile(newMember); //Kalder på metoden
+
+            // Kalder metode for at gemme det nye medlem i filen.
+            SaveMemberToFile(newMember);
+
+            // Viser bekræftelse af oprettelse og login-information.
             MessageBox.Show($"Bruger oprettet! \nDit Brugernavn er {newMember.name} \nDit Adgangskode er {newMember.id}");
+
             this.Close();
         }
 

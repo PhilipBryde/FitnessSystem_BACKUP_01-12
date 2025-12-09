@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 
+//Sidney Kode 
 namespace FitnessProgram
 {
     public partial class MemberWindow : Window
