@@ -42,7 +42,7 @@ namespace FitnessProgram
                 MessageBox.Show("Alder skal være et tal.");
                 return;
             }
-            // Opretter et nyt medlem via Fitness-systemet.
+            // Opretter et nyt medlem via Fitness-klassen.
             Member newMember = _fitness.Register(name, gender, age);
 
             // Kalder metode for at gemme det nye medlem i filen.
@@ -51,7 +51,7 @@ namespace FitnessProgram
             // Viser bekræftelse af oprettelse og login-information.
             MessageBox.Show($"Bruger oprettet! \nDit Brugernavn er {newMember.name} \nDit Adgangskode er {newMember.id}");
 
-            this.Close();
+            this.Close(); //Lukker vinduet
         }
 
     }

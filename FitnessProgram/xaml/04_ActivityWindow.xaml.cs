@@ -14,9 +14,8 @@ namespace FitnessProgram
     {
         private readonly Fitness fitness; // Shared fitness system
         private readonly Member member;   // Logged in user
-        public int newActCount = 0;
+        public int newActCount = 0; //Variabel der sørger for at der ikke kan laves for mange nye aktiviteter
 
-        // --- Constructor: skal match Option 1 ---
         public ActivityWindow(Fitness fitness, Member member)
         {
             InitializeComponent();
@@ -24,7 +23,7 @@ namespace FitnessProgram
             this.fitness = fitness;
             this.member = member;
 
-            ShowActivity();
+            ShowActivity(); //Viser aktiviteter med medlemmer
             ApplyRoleRestrictions(); // fjerner admin controls if not admin
             ApplyRoleRestrictions1(); // Member leave or join activity
             UpdateAllCapacities(); // updater så man kan se hvor mange er på en aktivitet
@@ -50,8 +49,8 @@ namespace FitnessProgram
         // Sidney Kode
         private void ShowActivity() //Oprettelse af aktiviteter
         {
-            List<string> localMembers = fitness.MemberFromFile(); //Kopi af listen over medlemmer
-            List<string> localActivities = fitness.ActivityFromFile(); //Kopi af listen over aktiviteter
+            List<string> localMembers = fitness.MemberFromFile(); //Får listen over medlemmer fra Fitness-klassen
+            List<string> localActivities = fitness.ActivityFromFile(); //Får listen over aktiviteter fra Fitness-klassen
 
             if (Yoga != null) // Sikkerhedscheck for TextBlock
             {
@@ -96,7 +95,7 @@ namespace FitnessProgram
 
             if (localActivities.Count > 5 && extraAct != null)
             {
-                extraAct.Text = localActivities[5].ToUpper();
+                extraAct.Text = localActivities[5].ToUpper(); //Hvis der er kommet flere aktiviteter laves de her
             }
 
             if (localActivities.Count > 6 && extraAct1 != null)
@@ -105,7 +104,6 @@ namespace FitnessProgram
             }
             
         }
-        // Sidney Kode
 
         // Sikrer at almindelige brugere kun ser navne i de viste TextBlocks -- Philip
         private void FormatTextForNonAdmin()
@@ -176,32 +174,32 @@ namespace FitnessProgram
             }
         }
 
-        // Remove a member from an activity - Sidney
+        // Metode der fjerner medlem hvis man er admin - Sidney
         private void RemoveMemberFromActivity()
         {
             if (!int.TryParse(EnterActivity?.Text, out int activityIndex))
             {
-                MessageBox.Show("Indtast aktivitet 1-5");
+                MessageBox.Show("Indtast aktivitet 1-5"); // Fejlbesked hvis der ikke kan konverteres til en int
                 return;
             }
             
             if (!int.TryParse(EnterMember?.Text, out int memberId))
             {
-                MessageBox.Show("Indtast gyldigt medlem ID");
+                MessageBox.Show("Indtast gyldigt medlem ID"); // Fejlbesked hvis der ikke kan konverteres til en int
                 return;
             }
 
-            int memberIndex = memberId - 1;
+            int memberIndex = memberId - 1; //Minus 1 da ID 1 = 0
 
-            List<string> localMembers = fitness.MemberFromFile();
+            List<string> localMembers = fitness.MemberFromFile(); //Får listen af medlemmer fra Fitness-klassen
 
             if (memberIndex < 0 || memberIndex >= localMembers.Count)
             {
-                MessageBox.Show("Medlem findes ikke!");
+                MessageBox.Show("Medlem findes ikke!"); //Fejl besked hvis index ikke findes i listen
                 return;
             }
 
-            string memberName = localMembers[memberIndex];
+            string memberName = localMembers[memberIndex]; //Tager hele stringen fra indexen
 
             TextBlock? target = activityIndex switch
             {
@@ -218,37 +216,36 @@ namespace FitnessProgram
 
             List<string> lines = target.Text
                 .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)
-                .ToList();
+                .ToList(); //Split linjer i TextBlocken til en liste af strings
 
             bool removed = false;
 
             for (int i = 1; i < lines.Count; i++)
             {
-                // Tjek om linjen indeholder navnet i det korte format
+                // Tjekker om en a linjerne er i List<string> lines
                 if (lines[i].Contains(memberName, StringComparison.OrdinalIgnoreCase))
                 {
-                    lines.RemoveAt(i);
-                    removed = true;
+                    lines.RemoveAt(i); //Fjerner ved index
+                    removed = true; //bool sættes til true og stopper løkken
                     break;
                 }
             }
 
             if (!removed)
             {
-                MessageBox.Show("Medlem er ikke i denne aktivitet.");
+                MessageBox.Show("Medlem er ikke i denne aktivitet."); //Hvis medlem ikke er i aktiviteten
                 return;
             }
 
-            target.Text = string.Join(Environment.NewLine, lines);
+            target.Text = string.Join(Environment.NewLine, lines); //Opdaterer TextBlock
             MessageBox.Show($"Fjernede {memberName} fra aktiviteten.");
 
-            UpdateAllCapacities();
+            UpdateAllCapacities(); //Opdaterer kapacitetsvisningen
         }
 
-        //Hide Bruger login fra Admin -- philip
         private void ApplyRoleRestrictions1()
         {
-            if (member.role.ToLower() == "admin")
+            if (member.role.ToLower() == "admin") //Hide Bruger funktioner fra Admin -- philip
             {
                 // Admin knapper
                 if (DeleteMemberButton != null) DeleteMemberButton.Visibility = Visibility.Visible;
@@ -281,16 +278,16 @@ namespace FitnessProgram
             }
         }
 
-        //Medlemer tilmelder sig aktivitet -- Philip
+        //Medlemer tilmelder sig aktivitet -- Philip & Sidney
         private void JoinActivity_Click(object sender, RoutedEventArgs e)
         {
             if (!int.TryParse(TypeActivityIn?.Text, out int activityIndex))
             {
-                MessageBox.Show("Indtast et gyldigt aktivitetsnummer.");
+                MessageBox.Show("Indtast et gyldigt aktivitetsnummer."); //Fejlbesked hvis der ikke kan konverteres til int
                 return;
             }
 
-            TextBlock? target = activityIndex switch
+            TextBlock? target = activityIndex switch // Switch case; f.eks. input 4 går ind i Pilates TextBlock
             {
                 1 => Yoga,
                 2 => Boxing,
@@ -304,7 +301,7 @@ namespace FitnessProgram
 
             if (target == null)
             {
-                MessageBox.Show("Indtast et gyldigt aktivitetsnummer");
+                MessageBox.Show("Indtast et gyldigt aktivitetsnummer"); //Fejlbesked hvis et forkert nummer bliver tastet ind (TextBlock findes ikke)
                 return;
             }
 
@@ -348,19 +345,19 @@ namespace FitnessProgram
             // Skiftet fra CustomMessageBox til MessageBox.Show
             MessageBox.Show($"Du er nu tilmeldt {target.Text.Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries).First()}."); // Brug den faktiske aktivitet
 
-            UpdateAllCapacities();
+            UpdateAllCapacities(); //Opdater kapacitetsvisningen
         }
 
         //Medlemer melder sig af aktivitet - Philip
         private void LeaveActivity_Click(object sender, RoutedEventArgs e)
         {
-            if (!int.TryParse(TypeActivityIn?.Text, out int activityIndex))
+            if (!int.TryParse(TypeActivityIn?.Text, out int activityIndex)) 
             {
-                MessageBox.Show("Indtast et gyldigt aktivitetsnummer 1-5.");
+                MessageBox.Show("Indtast et gyldigt aktivitetsnummer 1-5."); //Fejlbesked hvis der ikke kan konverteres til int
                 return;
             }
 
-            TextBlock? target = activityIndex switch
+            TextBlock? target = activityIndex switch // Switch case; f.eks. input 4 går ind i Pilates TextBlock
             {
                 1 => Yoga,
                 2 => Boxing,
@@ -374,7 +371,7 @@ namespace FitnessProgram
 
             if (target == null)
             {
-                MessageBox.Show(" ");
+                MessageBox.Show(" "); //Fejlbesked hvis et forkert nummer bliver tastet ind (TextBlock findes ikke)
             }
 
             // Denne linje er kun til identifikation i metoden, men den fulde streng er ikke nødvendig for fjernelse takket være 'Contains'
@@ -388,48 +385,48 @@ namespace FitnessProgram
                 memberLineToRemove = member.name;
             }
 
-
+            // Split linjer og sætter dem i en liste af strings
             List<string> lines = target.Text
             .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries)
             .ToList();
 
-            // Find og fjern den linje, der matcher navnet/den fulde linje
+            // Find og fjern den linje, der matcher navnet/den fulde linje. Starter ved 1 da 0 er aktivitetsnavn
             bool removed = false;
             for (int i = 1; i < lines.Count; i++)
             {
                 // Tjek for en match. Vi bruger member.name, da den enten matcher det fulde admin-format eller det simple navn.
                 if (lines[i].Contains(member.name, StringComparison.OrdinalIgnoreCase))
                 {
-                    lines.RemoveAt(i);
+                    lines.RemoveAt(i); //Fjerner ved index
                     removed = true;
-                    break;
+                    break; //Stopper løkken og går ud
                 }
             }
 
 
             if (!removed)
             {
-                MessageBox.Show("Du er ikke tilmeldt dette hold.");
+                MessageBox.Show("Du er ikke tilmeldt dette hold."); //Besked hvis man ikke er på aktiviteten
                 return;
             }
 
-            target.Text = string.Join(Environment.NewLine, lines);
+            target.Text = string.Join(Environment.NewLine, lines); //Opdaterer TextBlocken
             MessageBox.Show("Du er nu frameldt.");
 
-            UpdateAllCapacities();
+            UpdateAllCapacities(); //Opdater kapacitetsvisningen
         }
 
-        //Vis antal meldemer tilmeldt aktivitet -- Philip 
+        //Vis antal meldemer tilmeldt aktivitet, tager 2 TextBlock som input -- Philip 
         private void UpdateCapacity(TextBlock activityText, TextBlock countText)
         {
-            int maxCapacity = 5;
+            int maxCapacity = 5; // Max kapacitet sat til 5
 
             var lines = activityText.Text
-                .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+                .Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries); //Split linjer til en array af strings
 
-            int count = lines.Length - 1; // minus activity name
+            int count = lines.Length - 1; // minus aktivitets navn
 
-            countText.Text = $"{count}/{maxCapacity} tilmeldt";
+            countText.Text = $"{count}/{maxCapacity} tilmeldt"; 
         }
         private void UpdateAllCapacities()
         {
@@ -444,9 +441,9 @@ namespace FitnessProgram
 
 
         // DELETE BUTTON HANDLER
-        private void DeleteActivityButton_Click(object sender, RoutedEventArgs e) //Knap der kører RemoveMemberFromActivity funktionen
+        private void DeleteMember_Click(object sender, RoutedEventArgs e) //Knap der kalder RemoveMemberFromActivity metoden
         {
-            RemoveMemberFromActivity();
+            RemoveMemberFromActivity(); 
         }
 
     
@@ -457,22 +454,20 @@ namespace FitnessProgram
             if (string.IsNullOrEmpty(input)) //if statement der kører så længe brugeren ikke skriver noget i TextBoxen
             {
                 MessageBox.Show("Indtast venligst et navn til aktivitetet");
-                return; //Stopper her og springer resten af koden nedenunder over
+                return; //Stopper her og går tilbage
             }
 
             if(newActCount >= 2)
             {
-                MessageBox.Show("Der kan ikke oprettes flere aktiviteter ligenu");
+                MessageBox.Show("Der kan ikke oprettes flere aktiviteter ligenu"); //Hvis der er blevet oprettet 2 nye aktiviteter allerede
                 return;
             }
-            // Sidney 
-            TextBlock block = new TextBlock(); //Opretter ny TextBlock med properties
-            string filePath = @"ActivityList.txt";
+            
             if (ActivityGrid != null)
             {
-                newActCount++;
+                newActCount++; //Inkerementerer varaiblen hver gang en ny aktivitet laves
                 fitness.SaveActivityToFile(input); //Gemmer den nye aktivitet i text filen via en metode i Fitness klassen, giver det nye navn som input
-                ShowActivity();
+                ShowActivity(); //Reloader vinduet
                 MessageBox.Show($"Aktivitet {input} oprettet");
             }
         }

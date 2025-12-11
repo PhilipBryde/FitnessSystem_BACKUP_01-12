@@ -67,12 +67,11 @@ public class Fitness
     {
         // Generer et nyt ID. Tager det højeste eksisterende ID og lægger 1 til.
         int newId = (memberList.Count > 0) ? memberList.Max(m => m.id) + 1 : 1; 
-        Member newMember = new Member(newId, name, gender);
-        memberList.Add(newMember);
+        Member newMember = new Member(newId, name, gender); // Opretter det nye medlem
+        memberList.Add(newMember); // Tilføjer den til memberList
         return newMember;
     }
 
-    // Sidney
     public List<string> MemberFromFile() //Public metode med liste over medlemmer -- Sidney
     {
         string filePath = @"MemberList.txt"; //Gemmer stien til textfilen

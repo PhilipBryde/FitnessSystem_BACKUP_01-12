@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using FitnessProgram;
 
-// Philip
-namespace FitnessProgram
+// --- BRUGES IKKE LÆNGERE ---
+/*namespace FitnessProgram
 {
     // Login-klassen står for at verificere brugere (Medlemmer og Administratorer).
     public class Login
@@ -45,4 +45,4 @@ namespace FitnessProgram
         }
 
     }
-}
+}*/

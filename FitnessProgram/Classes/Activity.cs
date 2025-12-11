@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using FitnessProgram;
 
-// Sidney og Philip
-namespace FitnessProgram
+// --- BRUGES IKKE LÆNGERE ---
+/*namespace FitnessProgram
 {
     public class ActivityInfo
     {
         public string activityName { get; set; }
         public int memberCount { get; set; }
     }
-}
+}*/

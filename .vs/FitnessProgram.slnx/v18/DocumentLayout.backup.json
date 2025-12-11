@@ -1,7 +1,52 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\bryde\\Documents\\GitHub\\FitnessSystem\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|c:\\users\\sidne\\source\\repos\\fitnesssystem\\fitnessprogram\\classes\\activity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|solutionrelative:fitnessprogram\\classes\\activity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|c:\\users\\sidne\\source\\repos\\fitnesssystem\\fitnessprogram\\classes\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|solutionrelative:fitnessprogram\\classes\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|c:\\users\\sidne\\source\\repos\\fitnesssystem\\fitnessprogram\\classes\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|solutionrelative:fitnessprogram\\classes\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|c:\\users\\sidne\\source\\repos\\fitnesssystem\\fitnessprogram\\fitness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|solutionrelative:fitnessprogram\\fitness.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|c:\\users\\sidne\\source\\repos\\fitnesssystem\\fitnessprogram\\xaml\\05_memberwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|solutionrelative:fitnessprogram\\xaml\\05_memberwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|c:\\users\\sidne\\source\\repos\\fitnesssystem\\fitnessprogram\\xaml\\04_activitywindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|solutionrelative:fitnessprogram\\xaml\\04_activitywindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|c:\\users\\sidne\\source\\repos\\fitnesssystem\\fitnessprogram\\xaml\\02_nextwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|solutionrelative:fitnessprogram\\xaml\\02_nextwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|c:\\users\\sidne\\source\\repos\\fitnesssystem\\fitnessprogram\\xaml\\01_mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|solutionrelative:fitnessprogram\\xaml\\01_mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|c:\\users\\sidne\\source\\repos\\fitnesssystem\\fitnessprogram\\xaml\\03_registerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|solutionrelative:fitnessprogram\\xaml\\03_registerwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|c:\\users\\sidne\\source\\repos\\fitnesssystem\\fitnessprogram\\xaml\\05_memberwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|solutionrelative:fitnessprogram\\xaml\\05_memberwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|c:\\users\\sidne\\source\\repos\\fitnesssystem\\fitnessprogram\\xaml\\04_activitywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{204B6883-A3E8-47E8-8DE8-F23E8F01227E}|FitnessProgram\\FitnessProgram.csproj|solutionrelative:fitnessprogram\\xaml\\04_activitywindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +54,150 @@
       "DocumentGroups": [
         {
           "DockedWidth": 222,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "04_ActivityWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\04_ActivityWindow.xaml.cs",
+              "RelativeDocumentMoniker": "FitnessProgram\\xaml\\04_ActivityWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\04_ActivityWindow.xaml.cs",
+              "RelativeToolTip": "FitnessProgram\\xaml\\04_ActivityWindow.xaml.cs",
+              "ViewState": "AgIAANQBAAAAAAAAAAAAAMgBAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T15:25:19.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Fitness.cs",
+              "DocumentMoniker": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\Fitness.cs",
+              "RelativeDocumentMoniker": "FitnessProgram\\Fitness.cs",
+              "ToolTip": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\Fitness.cs",
+              "RelativeToolTip": "FitnessProgram\\Fitness.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAE8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:01:46.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Activity.cs",
+              "DocumentMoniker": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\Classes\\Activity.cs",
+              "RelativeDocumentMoniker": "FitnessProgram\\Classes\\Activity.cs",
+              "ToolTip": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\Classes\\Activity.cs*",
+              "RelativeToolTip": "FitnessProgram\\Classes\\Activity.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T18:44:47.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Member.cs",
+              "DocumentMoniker": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\Classes\\Member.cs",
+              "RelativeDocumentMoniker": "FitnessProgram\\Classes\\Member.cs",
+              "ToolTip": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\Classes\\Member.cs",
+              "RelativeToolTip": "FitnessProgram\\Classes\\Member.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:07:55.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "03_RegisterWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\03_RegisterWindow.xaml.cs",
+              "RelativeDocumentMoniker": "FitnessProgram\\xaml\\03_RegisterWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\03_RegisterWindow.xaml.cs",
+              "RelativeToolTip": "FitnessProgram\\xaml\\03_RegisterWindow.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwDYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:06:04.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "05_MemberWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\05_MemberWindow.xaml.cs",
+              "RelativeDocumentMoniker": "FitnessProgram\\xaml\\05_MemberWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\05_MemberWindow.xaml.cs",
+              "RelativeToolTip": "FitnessProgram\\xaml\\05_MemberWindow.xaml.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwDgAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T15:28:32.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\Classes\\Login.cs",
+              "RelativeDocumentMoniker": "FitnessProgram\\Classes\\Login.cs",
+              "ToolTip": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\Classes\\Login.cs*",
+              "RelativeToolTip": "FitnessProgram\\Classes\\Login.cs*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwC8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T18:44:59.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "02_NextWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\02_NextWindow.xaml.cs",
+              "RelativeDocumentMoniker": "FitnessProgram\\xaml\\02_NextWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\02_NextWindow.xaml.cs",
+              "RelativeToolTip": "FitnessProgram\\xaml\\02_NextWindow.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:10:21.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "01_MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\01_MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "FitnessProgram\\xaml\\01_MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\01_MainWindow.xaml.cs",
+              "RelativeToolTip": "FitnessProgram\\xaml\\01_MainWindow.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAApwBgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T16:29:11.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "05_MemberWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\05_MemberWindow.xaml",
+              "RelativeDocumentMoniker": "FitnessProgram\\xaml\\05_MemberWindow.xaml",
+              "ToolTip": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\05_MemberWindow.xaml",
+              "RelativeToolTip": "FitnessProgram\\xaml\\05_MemberWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-11T15:28:54.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "04_ActivityWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\04_ActivityWindow.xaml",
+              "RelativeDocumentMoniker": "FitnessProgram\\xaml\\04_ActivityWindow.xaml",
+              "ToolTip": "C:\\Users\\sidne\\source\\repos\\FitnessSystem\\FitnessProgram\\xaml\\04_ActivityWindow.xaml",
+              "RelativeToolTip": "FitnessProgram\\xaml\\04_ActivityWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-11T15:25:34.838Z"
             }
           ]
         }

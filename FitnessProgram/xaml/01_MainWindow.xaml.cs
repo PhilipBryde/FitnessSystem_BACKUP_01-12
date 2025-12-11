@@ -43,9 +43,9 @@ namespace FitnessProgram
 
             // LOGIN SUCCESS: Open NextWindow
             NextWindow next = new NextWindow(loggedIn, _fitness);
-            next.Show();
+            next.Show(); // Åbner NextWindow
 
-            this.Close();
+            this.Close(); // Lukker nuværende
         }
 
         // --- REGISTER BUTTON --- Philip
